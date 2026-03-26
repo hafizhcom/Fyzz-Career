@@ -1,0 +1,446 @@
+body {
+  padding: 0;
+  margin: 250px 0;
+  background-image: url("bg-login.jpg") !important;
+  background-size: cover;
+  background-position: center;
+}
+.form {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  gap: 25px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 23%;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 6px;
+}
+
+label {
+  margin-right: 70%;
+  margin-bottom: 0px;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+.form h1 {
+  font-size: 1.8rem;
+  color: navy;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+select {
+  padding: 10px 80px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+select:hover,
+input:hover {
+  background-color: #cccccc;
+}
+
+input {
+  padding: 10px 80px;
+  border-radius: 50px;
+}
+
+.btn {
+  padding: 10px 150px;
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(29, 190, 29);
+  transition: 0.3s ease-in;
+  position: relative;
+}
+
+.btn::after {
+  content: "❯❯❯❯";
+  position: absolute;
+  animation: geser 3s ease-in-out infinite;
+  left: 60%;
+  font-size: 15px;
+}
+
+@keyframes geser {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.back::after {
+  content: "❮❮❮❮";
+  position: absolute;
+  animation: geser 3s ease-in-out infinite;
+  left: 35%;
+  font-size: 15px;
+}
+
+@keyframes geser {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn:hover,
+.back:hover {
+  transform: translateY(-5px);
+  background-color: lightblue;
+  color: black;
+}
+
+.btn:hover::after,
+.back:hover::after {
+  animation: none;
+}
+
+a.btn {
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.back {
+  padding: 10px 150px;
+  border-radius: 50px;
+  background-color: blue;
+  color: white;
+  position: relative;
+}
+
+a.back {
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4a90e2, #1e3a8a);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a;
+}
+
+.help {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #4a90e2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: up 3s ease-in-out infinite;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* tooltip */
+.tooltip {
+  position: absolute;
+  right: 65px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* desktop */
+.help:hover .tooltip {
+  opacity: 1;
+}
+
+
+
+@media (max-width: 767px) {
+  body {
+    margin: 235px auto;
+    padding: 0;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .form {
+    width: 50%;
+    height: auto;
+    border-radius: 40px 5px 40px 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px  30px black;
+    border: 1px solid white;
+  }
+
+  label {
+    display: none;
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    color: navy;
+    font-weight: bold;
+  }
+
+  select {
+    padding: 10px 30px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #3d3b3b;
+  }
+
+  input {
+    padding: 10px 33px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #3d3b3b;
+  }
+
+  .btn {
+    padding: 10px 100px;
+  }
+
+  .back {
+    padding: 10px 90px;
+  }
+
+  .btn::after {
+    font-size: 13px;
+    left: 70%;
+  }
+
+  .back::after {
+    font-size: 13px;
+    left: 25%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4a90e2, #1e3a8a);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e3a8a;
+  }
+
+  .help{
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 12px;
+    top: 90%;
+  }
+
+  .tooltip{
+    opacity: 1;
+    right: 55px;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    animation: opacity 2.5s infinite;
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+}
+
+@media (max-width: 932px) and (orientation: landscape) {
+  body {
+    margin: 50px auto;
+    height: auto;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  label {
+    display: none;
+  }
+
+  .form {
+    width: 40%;
+    padding: 15px;
+    height: auto;
+    border-radius: 40px 5px 40px 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px  30px black;
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    color: navy;
+    font-weight: bold;
+  }
+
+  select {
+    padding: 10px 45px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #3d3b3b;
+  }
+
+  input {
+    padding: 10px 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #3d3b3b;
+  }
+
+  .btn {
+    padding: 10px 113px;
+  }
+
+  .back {
+    padding: 10px 103px;
+  }
+}
+
+@media (min-width: 1024px)  {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("pin.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 420px; /* ukuran ideal untuk laptop */
+    padding: 50px 45px;
+    border-radius: 50px 5px 50px 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px  30px black;
+    border: 1px solid white;
+  }
+
+  label {
+  margin-right: 70%;
+  margin-bottom: 0px;
+  color: black;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+}
+
+  .form h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: navy;
+    font-weight: bold;
+  }
+
+  select,
+  input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    border: 1px solid #3d3b3b;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .btn,
+  .back {
+    width: 93%;
+    padding: 14px;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .btn {
+    background-color: rgb(29, 190, 29);
+    color: white;
+  }
+
+  .back {
+    background-color: blue;
+    color: white;
+  }
+
+  .btn:hover,
+  .back:hover {
+    transform: translateY(-5px);
+    background-color: lightblue;
+    color: black;
+  }
+
+  a.btn,
+  a.back {
+    text-decoration: none;
+    font-family: sans-serif;
+    display: inline-block;
+  }
+}
