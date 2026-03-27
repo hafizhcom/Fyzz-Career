@@ -17,7 +17,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     var nomor = "6281584266490"; // Ganti nomor kamu
 
     var url = "https://wa.me/" + nomor + 
-            "?text=Halo,%20saya%20" + nama + 
+            "?text=Halo 👋,%20saya%20" + nama + 
             "%0ALayanan%20Saya:%20" + layanan +
             "%0ADetail:%20" + pesan;
 
