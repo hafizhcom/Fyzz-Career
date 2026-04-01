@@ -3,6 +3,12 @@ body {
   margin: 250px 0;
   background-color: #1e3a8a;
 }
+
+.form img {
+  width: 75%;
+  height: 75%;
+}
+
 .form {
   justify-content: center;
   align-items: center;
@@ -40,6 +46,7 @@ select {
 select:hover,
 input:hover {
   background-color: #cccccc;
+  color: red;
 }
 
 input {
@@ -199,6 +206,11 @@ a.back {
     padding: 0;
     height: auto;
     background-color: #1e3a8a
+  }
+
+  .form img {
+    width: 80%;
+    height: auto;
   }
 
   .form {
@@ -362,6 +374,11 @@ a.back {
     font-family: Arial, sans-serif;
     background-color: #1e3a8a;
   }
+
+  .form img {
+  width: 75%;
+  height: 75%;
+}
 
   .form {
     display: flex;
