@@ -23,14 +23,9 @@ header {
   font-weight: bold;
 }
 
-header h1 {
-  font-family: Arial, sans-serif;
-  font-size: 1.5rem;
-  padding: 15px;
-  /* color: #007BFF;*/
-  color: #add8e6;
-  font-weight: bold;
-  margin-left: 10px;
+header img {
+  width: 5%;
+  height: 5%;
 }
 
 .navbar ul {
@@ -887,6 +882,11 @@ footer {
     font-weight: bold;
   }
 
+  header img {
+  width: 20%;
+  height: 20%;
+}
+
   #order-map {
     height: auto;
     margin: 0 auto;
@@ -1387,6 +1387,11 @@ footer {
     background-position: center;
     background-size: cover;
   }
+
+  header img {
+  width: 5%;
+  height: 5%;
+}
 
   .box p {
   font-size: 0.8rem;
