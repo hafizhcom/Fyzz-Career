@@ -1390,6 +1390,10 @@ footer {
     background-size: cover;
   }
 
+  header {
+height: auto;
+  }
+
   header img {
   width: 5%;
   height: 5%;
@@ -1461,6 +1465,7 @@ footer {
   .produk-item {
     border-left: 8px solid #42bee7;
     border-radius: 20px;
+    height: auto;
   }
 
   /* TESTIMONI */
