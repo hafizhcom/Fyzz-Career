@@ -1400,12 +1400,40 @@ height: auto;
     filter: drop-shadow(0 0 3px white);
 }
 
+  .box {
+    padding: 3rem 0;
+    margin-top: 50px;
+  }
+
+  .box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .box-list {
+    gap: 30px;
+    flex-wrap: wrap; /* biar aman kalau kepenuhan */
+  }
+
+  .box-item {
+    padding: 25px 40px;
+    border-radius: 10px;
+    width: 250px;
+  }
+
+  .box-item h2 {
+    font-size: 1.8rem;
+  }
+
   .box p {
-  font-size: 0.8rem;
-  color: black;
-  font-family: Arial, sans-serif;
-  margin-bottom: 25px;
-}
+    font-size: 0.95rem;
+  }
+
+  /* 🔥 hover biar interaktif */
+  .box-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
 
   #hero h1 {
     font-size: 2.5rem;
