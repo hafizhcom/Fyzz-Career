@@ -6,6 +6,15 @@ body {
   width: 100%;
 }
 
+.btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+
+
 * {
   box-sizing: border-box;
 }
