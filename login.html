@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login fyzz-career</title>
-    <meta property="og:site_name" content="FyzzCareer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="favicon-2.png" type="image/png">
     <meta property="og:image" content="https://fyzz-career.vercel.app/og-imageV2.jpg">
     <meta property="og:url" content="https://fyzz-career.vercel.app/">
@@ -23,9 +23,13 @@
     <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    <div class="form">
+        <div class="image">
+            <h3 data-aos="fade-right"><b style="color: #ADD8E6; text-shadow: 2px 1px 1px grey;">FyzzCareer</b> Login <br> Masuk untuk mengakses seluruh layanan dan fitur yang tersedia.</h3>
+            <img src="caracter-login.png" alt="character-login" data-aos="fade-up">
+        </div>
+    <div class="form" data-aos="fade-left">
         <img src="logo-login.png" alt="logo-login">
-        <h1>Masuk ➜]</h1>
+        <h1>Masuk ➜] </h1>
         <label for="username">👤Username : </label>
         <select id="username">
             <option value="username1" disabled selected>masukkan & pilih username</option>
@@ -36,7 +40,7 @@
         </select>
 
         <label for="password">🔒Password : </label>
-        <input type="password" placeholder="masukkan 4 digit awal username" id="password">
+        <input type="password" placeholder="password(4 digit awal username)" id="password">
         <a href="toko.html" class="btn" id="login">Login</a>
         <a href="index.html" class="back">Kembali</a>
     </div>
@@ -50,5 +54,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    window.addEventListener('load', function() {
+    AOS.init({
+            easing: 'ease-in-out',
+            duration: 1200,
+            offset: 200,
+            once: true
+    });
+    });
+</script>
 </body>
 </html>
