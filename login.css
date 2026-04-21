@@ -20,6 +20,7 @@ body {
   margin: 0 auto;
   padding: 50px;
   border-radius: 6px;
+  margin-right: 10%;
 }
 
 label {
@@ -198,14 +199,70 @@ a.back {
   opacity: 1;
 }
 
+.image {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid white;
+  margin-left: 80px;
+  margin-right: 80px;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 20%;
+  background-color: #4a90e2;
+  border-radius: 6px;
+  width: auto;
+}
+
+.image img {
+
+  width: 70%;
+  height: auto;
+}
+
+.image h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin-left: 20%;
+}
 
 
 @media (max-width: 767px) {
   body {
-    margin: 235px auto;
+    margin: 0; /*230px auto;*/
     padding: 0;
     height: auto;
-    background-color: #1e3a8a
+    background-color: #1e3a8a;
+  }
+
+  .image {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1e3a8a;
+  }
+
+  .image h3 {
+    display: none;
+  }
+
+  .image img {
+    width: 70%;
+    height: auto;
+    animation: atas 5s ease-in-out infinite;
+  }
+
+  @keyframes atas {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(180px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   .form img {
@@ -219,6 +276,7 @@ a.back {
     border-radius: 10px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
+    margin-bottom: 100px;
   }
 
   label {
@@ -386,7 +444,7 @@ a.back {
     gap: 25px;
     width: 420px; /* ukuran ideal untuk laptop */
     padding: 50px 45px;
-    border: 8px solid #cccc;
+    border: 2px solid #cccc;
     background-color: #f1f1f1;
     
   }
@@ -453,4 +511,32 @@ a.back {
     font-family: sans-serif;
     display: inline-block;
   }
+
+  .image {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid white;
+  margin-left: 80px;
+  margin-right: 80px;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 20%;
+  background-color: #4a90e2;
+  border-radius: 6px;
+  margin-top: 10%;
+  width: auto;
+}
+
+.image img {
+  width: 70%;
+  height: auto;
+}
+
+.image h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin-left: 20%;
+}
 }
