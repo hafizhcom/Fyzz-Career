@@ -19,8 +19,9 @@ body {
   width: 23%;
   margin: 0 auto;
   padding: 50px;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-right: 10%;
+  height: auto;
 }
 
 label {
@@ -211,6 +212,7 @@ a.back {
   background-color: #4a90e2;
   border-radius: 6px;
   margin-top: 10%;
+  width: 70%;
 }
 
 .image img {
@@ -439,6 +441,7 @@ a.back {
     padding: 50px 45px;
     border: 2px solid #cccc;
     background-color: #f1f1f1;
+    height: auto;
     
   }
 
@@ -509,21 +512,21 @@ a.back {
   display: flex;
   justify-content: space-evenly;
   border: 2px solid white;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin: 10% 0;
+  margin-left: 10%;
   align-items: center;
   padding: 2rem 0;
   margin-bottom: 20%;
   background-color: #4a90e2;
-  border-radius: 6px;
-  margin-top: 10%;
+  border-radius: 5px;
+  margin-top: 20%;
   width: auto;
-  height: auto;
+  height:  64vh;
 }
 
 .image img {
   width: 70%;
-  height: auto;
+  height: 70%;
 }
 
 .image h3 {
