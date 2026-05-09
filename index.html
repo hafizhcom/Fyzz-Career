@@ -5,8 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FyzzCareer | Jasa Pembuatan Web Portofolio, Web Landing Page Usaha, CV, & Makalah</title>
-    <meta property="og:site_name" content="FyzzCareer">
+    <title>FyzzCareer | Jasa Web, CV & Website Promosi Profesional</title>
     <link rel="icon" href="favicon-2.png" type="image/png">
     <meta property="og:image" content="https://fyzz-career.vercel.app/og-imageV2.jpg">
     <meta property="og:url" content="https://fyzz-career.vercel.app/">
@@ -25,7 +24,7 @@
 </head>
 <body>
     <header>
-         <img src="logo-login.png" alt="logo-fc">
+        <img src="logo-login.png" alt="logo-fc">
     </header>
     <h2 data-aos="zoom-in">Selamat Datang di <b style="color: #ADD8E6; text-shadow: 2px 2px 1px black;"><br>FyzzCareer</b></h2>
     <p data-aos="zoom-in">Tempat joki favorit kamu ⭐⭐⭐ Produk pilihan, <br>kualitas terbaik, dan harga bersahabat.</p>
@@ -36,20 +35,13 @@
         body {
             margin: 0;
             padding: 0;
-            text-align: center;
             background-color: #001F3F;
             color: white;
-            background-image: url('bg-homepage.jpeg');
+            background-image: url('bg-homepage-2.jpg');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 100vh;
         }
-
-         header img {
-    width: 5%;
-    height: 5%;
-             filter: drop-shadow(0 0 3px white);
-}
 
         header {
             display: flex;
@@ -57,31 +49,47 @@
             background-color: #001F3F;
         }
 
+        header img {
+    width: 5%;
+    height: 5%;
+    filter: drop-shadow(0 0 3px white);
+}
+
+        header h1 {
+            font-size: 25px;
+            color: #ADD8E6;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin-left: 25px;
+        }
 
         p {
             font-size: 18px;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin-bottom: 45px;
-            color: white;
+            color: black;
             margin-top: 35px;
+            margin-left: 30px;
         }
 
         h2 {
             font-size: 3rem;
             font-family: Arial, sans-serif;
             margin-top: 105px;
-            color: white;
+            color: black;
             font-weight: bold;
+            margin-left: 30px;
         }
 
         .button {
             padding: 15px 115px;
-            background-color: none;
+            background-color: #001f3f;
             border: 2px solid white;
             color: white;
             border-radius: 10px;
             transition: all 0.3s ease;
+            margin-left: 30px;
         }
 
         .button:hover {
@@ -125,12 +133,17 @@
         background-position: center;
 }
 
-     header img {
-    width: 20%;
-    height: 20%;
-         filter: drop-shadow(0 0 3px white);
+    header h1 {
+        font-size: 18px;
+        font-family: Arial, sans-serif;
 }
-        
+
+    header img {
+  width: 20%;
+  height: 20%;
+  filter: drop-shadow(0 0 3px white);
+}
+
     h2 {
         font-size: 1.8rem;
         text-align: left;
@@ -165,7 +178,7 @@
     text-align: center;
     font-size: 13px;
     font-family: Arial, sans-serif;
-    color: white;
+    background: none;
 }
 
 ::-webkit-scrollbar {
@@ -196,29 +209,28 @@
 
     body {
         height: 100vh;
-        background-image: url('bg-homepage.jpeg');
+        background-image: url('bg-homepage-2.jpg');
         background-size: cover;
         background-position: center;
     }
 
-     header img {
-    width: 10%;
-    height: 10%;
-         filter: drop-shadow(0 0 3px white);
+    header img {
+  width: 10%;
+  height: 10%;
+  filter: drop-shadow(0 0 3px white);
 }
 
     h2 {
-        font-size: 1.5rem;   /* Ukuran judul disesuaikan agar tidak menutupi layar */
-        margin-left: 10px;
+        font-size: 1.8rem;   /* Ukuran judul disesuaikan agar tidak menutupi layar */
+        margin-left: 15px;
         margin-top: 10px;
         margin-top: 25px;
-        color: white;
+        color: black;
         font-family: Arial, sans-serif;
-        text-align: center;
     }
 
     header {
-        height: auto !important;
+        height: auto ;
         padding: 15px !important;
         width: 100% !important;
     }
@@ -227,22 +239,23 @@
         /* JANGAN gunakan margin-bottom 373px di sini karena layar miring itu pendek */
         margin-bottom: 30px; 
         font-size: 12px;
-        margin-left: 10px;
+        margin-left: 15px;
         line-height: 1.4;
         margin-bottom: 80px;
-        color: white;
-        text-align: center;
+        color: black;
         font-family: Arial, sans-serif;
     }
 
     .button {
         /* Padding 158px di kiri-kanan akan membuat tombol terlalu lebar di mode miring */
         padding: 15px 128px; 
-        display: inline-block;
+        justify-content: center;
+        align-items: center;
         width: auto;
         border-radius: 50px;
         text-align: center;
         color: white;
+        background: #001f3f;
     }
 
     .button:hover {
@@ -269,22 +282,29 @@
         padding: 0 40px;
     }
 
+    header img {
+    width: 5%;
+    height: 5%;
+    filter: drop-shadow(0 0 3px white);
+}
+
     header {
         padding: 20px 40px;
         align-items: center;
     }
 
-     header img {
-    width: 5%;
-    height: 5%;
-         filter: drop-shadow(0 0 3px white);
-}
+    header h1 {
+        font-size: 28px;
+        margin-left: 0;
+        font-family: Arial, sans-serif;
+    }
+
     h2 {
         font-size: 3.5rem;
         margin-top: 140px;
         font-weight: bold;
         font-family: Arial, sans-serif;
-        color: white;
+        margin-left: 30px;
     }
 
     p {
@@ -292,13 +312,14 @@
         max-width: 800px;
         margin: 20px auto 50px auto;
         font-family: Arial, sans-serif;
-        color: white;
+        margin-left: 30px;
     }
 
     .button {
         padding: 18px 130px;
         font-size: 18px;
         border-radius: 12px;
+        margin-left: 30px;
     }
 
     .button:hover {
