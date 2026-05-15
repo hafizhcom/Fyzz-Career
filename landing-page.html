@@ -60,6 +60,10 @@
                     Pesan sekarang
                 </button>
 
+                <a tabindex="0" class="btn btn-primary mt-3" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="💡 Website ini dibuat untuk membantu bisnis Anda tampil lebih profesional dan terpercaya di mata pelanggan." data-bs-content="Bukan hanya sekadar tampilan website biasa, tetapi juga dilengkapi desain modern, optimasi mobile, performa cepat, SEO friendly, form chat konsultasi, serta fitur interaktif yang nyaman digunakan di berbagai perangkat. 
+Harga yang ditawarkan sudah termasuk hosting, domain, revisi, dan konsultasi desain agar website benar-benar sesuai dengan kebutuhan bisnis Anda. 
+Dengan kualitas dan fitur yang diberikan, website ini menjadi investasi digital yang tepat untuk mendukung promosi dan perkembangan usaha Anda.">💡 Kenapa cuma Rp 400.000 ?</a>
+
                 <p class="mt-3">⏳ status : </p>
                 <p style="font-style: italic; color: grey;" id="teks">🚫 Belum ada pesanan saat ini.....</p>
                 <p class="text-secondary small fw-semibold mt-2">
@@ -77,6 +81,53 @@
         box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid #2a2a2a;
     }
+
+    .emoji {
+        display: inline-block;
+        animation: naikTurun 1s ease-in infinite;
+}
+
+@keyframes naikTurun {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-5px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+
+    a.btn-primary, a.btn-dark{
+        position: relative;
+    }
+
+    a.btn-primary::after, a.btn-dark::after {
+        content: "👆🏻";
+        position:absolute;
+        top: 28px;
+        left: 50%;
+        animation: up 1s ease-in-out infinite;
+        font-size: 23px;
+        }
+
+        @keyframes up {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(12px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        a.btn-primary:hover::after, a.btn-dark:hover::after {
+            animation: none;
+            display: none;
+        }
 </style>
 
 <!-- 3. JS LIBRARY TARO SEBELUM SCRIPT LU -->
