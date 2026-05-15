@@ -1,3 +1,7 @@
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
 Swal.fire({
         title: "Paket Pembuatan Web Landing Page",
         text: "Tingkatkan penjualan usaha kamu dengan landing page profesional yang menarik dan mudah digunakan. Pesan sekarang untuk solusi digital yang efektif!",
