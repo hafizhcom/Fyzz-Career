@@ -24,6 +24,20 @@ i .bi-box-arrow-in-up-right:hover {
   box-sizing: border-box;
 }
 
+/* classlist js */
+.spinner1 {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
 /*dark mode */
 #toggleBtn {
   border-radius: 50%;
