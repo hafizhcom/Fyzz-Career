@@ -1,7 +1,6 @@
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-
 Swal.fire({
         title: "Paket Pembuatan Web Landing Page",
         text: "Tingkatkan penjualan usaha kamu dengan landing page profesional yang menarik dan mudah digunakan. Pesan sekarang untuk solusi digital yang efektif!",
@@ -13,6 +12,7 @@ Swal.fire({
     const header = document.getElementById('header');
     const toggleBtn = document.getElementById("toggleBtn");
     const body = document.body;
+    const faSolidOne = document.getElementById('faSolidOne');
 
     alertify.defaults.glossary.title = 'Konfirmasi'; 
     alertify.defaults.glossary.ok = 'Ya, Lanjut';
@@ -30,10 +30,16 @@ Swal.fire({
                 tombol.style.backgroundColor = "lightgrey";
                 tombol.style.border = "none";
                 tombol.style.color = "grey";
+                faSolidOne.classList.add('fontAwesome-icon-one');
                 window.location.href = 'https://wa.me/6281584266490?text=Halo%20Admin%20FyzzCareer%20,%0A%0ASaya%20ingin%20memesan%20paket%20landing%20page';
             },
             function(){
                 alertify.error('Dibatalkan');
+                tombol.innerHTML = "Pesanan dibatalkan";
+                tombol.style.backgroundColor = "#f89393";
+                tombol.style.color = "white";
+                tombol.style.border = "none";
+                teks.innerHTML = "❌ Pesanan paket landing page dibatalkan. Silakan coba lagi jika berubah pikiran.";
             }
         );
     }); 
