@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -36,7 +37,7 @@
         </ul>
         <a href="https://wa.me/6281584266490?text=Halo%20Admin%20FyzzCareer%20, %0A%0ASaya%20ingin%20memesan%20paket%201"></a>
         <button class="btn btn-light w-100" id="tombol" style="background-color: grey; border: none;">Pesan paket 1</button>
-        <p class="mt-3">⏳ status : </p>
+        <p class="mt-3"><i class="fa-solid fa-hourglass-half" id="faSolidOne"></i> Status pesanan : </p>
         <p id="teks" style="font-style: italic; color: grey;">🚫 Belum ada pesanan saat ini.....</p>
         <p class="text-secondary small fw-semibold mt-2 text-light-emphasis">
     ✅ 70+ makalah selesai • ⏱ Fast respon • 🔁 Revisi sampai puas
@@ -60,7 +61,7 @@
         </ul>
         <a href="https://wa.me/6281584266490?text=Halo%20Admin%20FyzzCareer%20, %0A%0ASaya%20ingin%20memesan%20paket%201"></a>
         <button class="btn btn-light w-100" id="button" style="background-color: black; color: gold; border: none;">Pesan paket 2</button>
-        <p class="mt-3">⏳ status : </p>
+        <p class="mt-3"><i class="fa-solid fa-hourglass-half" id="faSolidTwo"></i> Status pesanan : </p>
         <p id="text" style="font-style: italic; color: grey;">🚫 Belum ada pesanan saat ini.....</p>
         <p class="text-secondary small fw-semibold mt-2">
     ✅ 70+ makalah selesai • ⏱ Fast respon • 🔁 Revisi sampai puas
@@ -99,6 +100,34 @@
         background: linear-gradient(90deg, #1e1e1e, #111111);
         box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid #2a2a2a;
+    }
+
+    .fontAwesome-icon-one {
+        animation: rotate 3s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(0deg);
+        }
+        from {
+            transform: rotate(360deg);
+        }
+    }
+
+    .fontAwesome-icon-two {
+        animation: rotate 3s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(0deg);
+        }
+        from {
+            transform: rotate(360deg);
+        }
     }
         </style>
     
