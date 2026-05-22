@@ -1,4 +1,4 @@
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
     const button = document.getElementById('button');
@@ -9,6 +9,8 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
     const toggleBtn = document.getElementById('toggleBtn');
     const footer = document.getElementById('footer');
     const body = document.body;
+    const faSolidOne = document.getElementById('faSolidOne');
+    const faSolidTwo = document.getElementById('faSolidTwo');
 
     alertify.defaults.glossary.title = 'Konfirmasi Pesanan'; 
     alertify.defaults.glossary.ok = 'Ya, lanjut pesan';
@@ -26,10 +28,16 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
                 tombol.style.backgroundColor = "lightgrey";
                 tombol.style.border = "none";
                 tombol.style.color = "grey";
+                faSolidOne.classList.add('fontAwesome-icon-one');
                 window.location.href = 'https://wa.me/6281584266490?text=Halo%20Admin%20FyzzCareer%20,%0A%0ASaya%20ingin%20memesan%20paket%20landing%20page%20(paket%20standard)';
             },
             function(){
                 alertify.error('Dibatalkan');
+                tombol.innerHTML = "Pesanan dibatalkan";
+                tombol.style.backgroundColor = "#f89393";
+                tombol.style.color = "white";
+                tombol.style.border = "none";
+                teks.innerHTML = "❌ Pesanan paket landing page dibatalkan. Silakan coba lagi jika berubah pikiran.";
             }
         );
     }); 
@@ -51,9 +59,16 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
                 button.style.backgroundColor = "lightgrey";
                 button.style.border = "none";
                 button.style.color = "grey";
+                faSolidTwo.classList.add('fontAwesome-icon-two');
+
             },
             function(){
                 alertify.error('Dibatalkan');
+                button.innerHTML = "Pesanan dibatalkan";
+                button.style.backgroundColor = "#f89393";
+                button.style.color = "white";
+                button.style.border = "none";
+                text.innerHTML = "❌ Pesanan paket landing page dibatalkan. Silakan coba lagi jika berubah pikiran.";
             }
         );
     }); 
