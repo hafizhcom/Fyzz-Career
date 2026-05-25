@@ -6,6 +6,19 @@ body {
   width: 100%;
 }
 
+#carousel {
+  margin-top: 50px;
+}
+
+.carousel-item img {
+  text-align: center;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
 .btn-primary i {
   transition: transform 0.3s ease;
 }
@@ -16,9 +29,8 @@ body {
 
 i .bi-box-arrow-in-up-right:hover {
   transform: translateY(-10px);
-  transition: 0.5s ease-in ;
+  transition: 0.5s ease-in;
 }
-
 
 * {
   box-sizing: border-box;
@@ -58,39 +70,41 @@ i .bi-box-arrow-in-up-right:hover {
 
 .dark-mode header {
   background: linear-gradient(90deg, #111111, #1e1e1e);
-box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #2a2a2a;
   color: white;
 }
 
 .dark-mode footer {
   background: linear-gradient(90deg, #111111, #1e1e1e);
-box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-border-top: 1px solid #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #2a2a2a;
 }
 
 .dark-mode .text-foot {
-  background: linear-gradient(90deg, #111111, #1e1e1e);
+  background-color: rgb(19, 17, 17);
 }
 
-.dark-mode .box p{
+.dark-mode .box p {
   color: white;
 }
 
 .dark-mode .box-item {
-  background-color: #2b2b2b;
-  border: 1px solid cyan;
+  background: linear-gradient(to left, #111111, #363030);
+  border: 1px solid white;
 }
 
 .dark-mode .box-item h2 {
   color: lightblue;
 }
 
-.dark-mode .box-item:hover, .dark-mode .contact-item:hover, .dark-mode .testimoni-item:hover {
+.dark-mode .box-item:hover,
+.dark-mode .contact-item:hover,
+.dark-mode .testimoni-item:hover {
   background-color: black;
 }
 
-.dark-mode .promosi {
+.dark-mode .promosi,  .dark-mode #games {
   background-color: #2b2b2b;
   border-left: 8px solid cyan;
 }
@@ -99,7 +113,8 @@ border-top: 1px solid #2a2a2a;
   color: white;
 }
 
-.dark-mode .about, .dark-mode #faq {
+.dark-mode .about,
+.dark-mode #faq {
   background-color: #2b2b2b;
 }
 
@@ -112,20 +127,29 @@ border-top: 1px solid #2a2a2a;
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("bg-4.jpeg");
 }
 
-.dark-mode .about h1, .dark-mode #produk h1, .dark-mode .testimoni h1, .dark-mode .contact h1, .dark-mode .testimoni-item h3  {
+.dark-mode .about h1,
+.dark-mode #produk h1,
+.dark-mode .testimoni h1,
+.dark-mode .contact h1,
+.dark-mode .testimoni-item h3,
+.dark-mode #games h1 {
   color: cyan;
 }
 
-.dark-mode .about p, .dark-mode .testimoni-item p, .dark-mode #contactForm p {
+.dark-mode .about p,
+.dark-mode .testimoni-item p,
+.dark-mode #contactForm p
+.dark-mode #games p {
   color: white;
 }
 
 .dark-mode .medsos-item {
   background-color: #2a2a2a;
   border: 1px solid cyan;
-} 
+}
 
-.dark-mode .produk-item, .dark-mode .contact-item {
+.dark-mode .produk-item,
+.dark-mode .contact-item {
   background-color: #2a2a2a;
   box-shadow: none;
 }
@@ -138,15 +162,18 @@ border-top: 1px solid #2a2a2a;
   color: lightblue;
 }
 
-.dark-mode .testimoni-item, .dark-mode #contactForm {
+.dark-mode .testimoni-item,
+.dark-mode #contactForm {
   background-color: #2a2a2a;
 }
 
-.dark-mode .contact-item li, .dark-mode .contact-item p {
+.dark-mode .contact-item li,
+.dark-mode .contact-item p {
   color: lightblue;
 }
 
-.dark-mode #contactForm input , .dark-mode #contactForm textarea {
+.dark-mode #contactForm input,
+.dark-mode #contactForm textarea {
   background-color: #2a2a2a;
   border: 1px solid cyan;
   color: white;
@@ -155,8 +182,6 @@ border-top: 1px solid #2a2a2a;
 .dark-mode .faq-list button {
   color: white;
 }
-
-
 
 header {
   /*background-color: #F8F9FA;*/
@@ -372,18 +397,65 @@ header img {
   border-left: 8px solid #42bee7;
 }
 
-#order-map {
-  margin-top: 40px;
-  padding: 2rem 0;
+#games {
+  margin-top: 90px;
+  background-color: white;
+  padding: 8rem 0;
+  margin: 150px 150px;
+  border-left: 8px solid #42bee7;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  border-radius: 20px;
 }
 
-#order-map img {
-  width: 50%;
-  height: 50%;
-  image-rendering: auto;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  margin-left: 50px;
+#games h1 {
+  font-family: Arial, sans-serif;
+  color: navy;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#games h2 i {
+  font-size: 8rem;
+  color: red;
+  margin-bottom: 30px;
+}
+
+#games button {
+  padding: 10px 30px;
+  background-color: lightgreen;
+  border-radius: 50px;
+  box-shadow: 3px 5px 2px green;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+#games button:hover {
+  transform: translateY(3px);
+  transition: ease-in-out;
+  box-shadow: none;
+  background-color: #1ebe5d;
+}
+
+#games p {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.fa-spinner {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
 
 .about {
@@ -1019,7 +1091,6 @@ footer {
   opacity: 1;
 }
 
-
 @media (max-width: 767px) {
   * {
     box-sizing: border-box;
@@ -1032,10 +1103,15 @@ footer {
   }
 
   header img {
-  width: 15%;
-  height: 15%;
-  filter: drop-shadow(0 0 3px white);
-}
+    width: 15%;
+    height: 15%;
+    filter: drop-shadow(0 0 3px white);
+  }
+
+  .carousel-item img {
+    height: 700px;
+    object-fit: cover;
+  }
 
   #order-map {
     height: auto;
@@ -1192,6 +1268,36 @@ footer {
     height: auto;
   }
 
+  #games {
+    margin: 80px 20px;
+    padding: 4rem 1.5rem;
+    border-left: 7px solid #42bee7;
+    border-radius: 15px;
+  }
+
+  #games h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  #games h2 i {
+    font-size: 6rem;
+    margin-bottom: 20px;
+  }
+
+  #games p {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  #games button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
   .about {
     height: auto;
   }
@@ -1244,26 +1350,25 @@ footer {
     font-weight: bold !important;
   }
 
-
   .produk-item {
-  border-top: 10px solid #42bee7;
-  border-bottom: 10px solid #42bee7;
-  border-radius: 25px;
-  border-left: none;
-  
-  /* PERUBAHAN DI SINI */
-  width: 100%;           /* Pakai 100% agar mengikuti lebar .produk (90%) */
-  margin: 10px 0;        /* Hapus margin kiri-kanan 15px, ganti ke margin atas-bawah */
-  box-sizing: border-box; /* WAJIB: Supaya padding & border tidak menambah lebar box */
-  padding: 15px;
-}
+    border-top: 10px solid #42bee7;
+    border-bottom: 10px solid #42bee7;
+    border-radius: 25px;
+    border-left: none;
+
+    /* PERUBAHAN DI SINI */
+    width: 100%; /* Pakai 100% agar mengikuti lebar .produk (90%) */
+    margin: 10px 0; /* Hapus margin kiri-kanan 15px, ganti ke margin atas-bawah */
+    box-sizing: border-box; /* WAJIB: Supaya padding & border tidak menambah lebar box */
+    padding: 15px;
+  }
 
   .produk img {
-  max-width: 100%; /* WAJIB: Mencegah gambar lebih lebar dari parent-nya */
-  height: auto;    /* Memastikan rasio gambar tetap proporsional (tidak gepeng) */
-  display: block;  /* Menghilangkan whitespace kecil di bawah gambar */
-  margin: 0 auto;  /* Memastikan gambar juga berada di tengah container-nya */
-}
+    max-width: 100%; /* WAJIB: Mencegah gambar lebih lebar dari parent-nya */
+    height: auto; /* Memastikan rasio gambar tetap proporsional (tidak gepeng) */
+    display: block; /* Menghilangkan whitespace kecil di bawah gambar */
+    margin: 0 auto; /* Memastikan gambar juga berada di tengah container-nya */
+  }
 
   .produk-item p {
     font-size: 12px;
@@ -1484,7 +1589,7 @@ footer {
     background: #1e3a8a;
   }
 
-  .help{
+  .help {
     width: 45px;
     height: 45px;
     bottom: 15px;
@@ -1492,7 +1597,7 @@ footer {
     top: 90%;
   }
 
-  .tooltip{
+  .tooltip {
     right: 55px;
     font-size: 0.75rem;
     padding: 4px 8px;
@@ -1511,7 +1616,6 @@ footer {
       opacity: 1;
     }
   }
-
 }
 
 @media screen and (orientation: landscape) and (max-width: 932px) {
@@ -1539,14 +1643,14 @@ footer {
   }
 
   header {
-height: auto;
+    height: auto;
   }
 
   header img {
-  width: 5%;
-  height: 5%;
+    width: 5%;
+    height: 5%;
     filter: drop-shadow(0 0 3px white);
-}
+  }
 
   .box {
     padding: 3rem 0;
@@ -1580,7 +1684,7 @@ height: auto;
   /* 🔥 hover biar interaktif */
   .box-item:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   }
 
   #hero h1 {
