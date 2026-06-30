@@ -139,24 +139,47 @@ const buttonPlay = document.getElementById("buttonPlay");
 
 buttonPlay.addEventListener('click', () => {
   Swal.fire({
-  title: "OOPS, Game masih dalam tahap pembuatan.",
-  width: 600,
-  padding: "1em",
-  color: "#3422f3",
-  background: "#f2f3f5",
+    title: "OOPS, dikit lagi gamenya rilis",
+    width: 600,
+    padding: "1em",
+    color: "#3422f3",
+    background: "#f2f3f5",
 
-  backdrop: `
-    rgba(3, 3, 26, 0.4)
-    url("gif-2.gif")
-    no-repeat
-  `,
+    backdrop: `
+      rgba(3, 3, 26, 0.4)
+      url("pixabay-cat.gif")
+      no-repeat
+    `,
 
-  didOpen: () => {
-    const backdrop = document.querySelector('.swal2-container');
-    backdrop.style.backgroundSize = "50%";
-    backdrop.style.backgroundPosition = "20px 80px";
-  }
-});//then(() => { //.then() digunakan untuk menjalankan sesuatu setelah proses sebelumnya selesai.
-    //window.location.href = "landing-page.html";
-  //});
+    didOpen: () => {
+      const backdrop = document.querySelector('.swal2-container');
+      backdrop.style.backgroundSize = "30%";
+      backdrop.style.backgroundPosition = "20px 80px";
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      setTimeout(() => {
+        window.location.href = "";
+      }, 1000); 
+    }
+  });
 });
+
+const method = document.getElementById("method");
+
+method.addEventListener("click", () => {
+  Swal.fire({
+  title: "Custom animation with Animate.css",
+  showClass: { popup: `
+      animate__animated
+      animate__backInDown
+      animate__slow
+    ` },
+  hideClass: { popup: `
+      animate__animated
+      animate__zoomOutDown
+      animate__slow
+    ` }
+});
+})
+
