@@ -143,6 +143,16 @@ i .bi-box-arrow-in-up-right:hover {
   color: white;
 }
 
+.dark-mode #games {
+  background-image: url("bg-games-neon.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dark-mode #games button#method {
+  background-color: linear-gradient(135deg, #6dd5fa, #2980b9);
+}
+
 .dark-mode .medsos-item {
   background-color: #2a2a2a;
   border: 1px solid cyan;
@@ -247,6 +257,19 @@ header img {
   background-position: center;
   background-size: cover;
   height: 95vh;
+}
+
+.hero-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-item img {
+  width: 45%;
+  height: auto;
+  margin-left: 190px;
+  margin-top: 100px;
 }
 
 #hero h1 {
@@ -399,13 +422,23 @@ header img {
 
 #games {
   margin-top: 90px;
-  background-color: white;
-  padding: 8rem 0;
+  background-image: url("bg-wood.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
   margin: 150px 150px;
   border-left: 8px solid #42bee7;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 20px;
+}
+
+#games img {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 8px solid burlywood;
 }
 
 #games h1 {
@@ -443,19 +476,6 @@ header img {
   font-family: Arial, sans-serif;
   font-size: 1.6rem;
   margin-bottom: 30px;
-}
-
-.fa-spinner {
-  animation: spin 2s infinite linear;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(0deg);
-  }
-  from {
-    transform: rotate(360deg);
-  }
 }
 
 .about {
@@ -1275,6 +1295,14 @@ footer {
     border-radius: 15px;
   }
 
+  #games img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 6px solid burlywood;
+  }
+
   #games h1 {
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -1651,6 +1679,62 @@ footer {
     height: 5%;
     filter: drop-shadow(0 0 3px white);
   }
+
+  #games {
+  margin-top: 90px;
+  background-color: white;
+  padding: 3rem 0;
+  margin: 150px 150px;
+  border-left: 8px solid #42bee7;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 20px;
+}
+
+#games img {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 8px solid burlywood;
+}
+
+#games h1 {
+  font-family: Arial, sans-serif;
+  color: navy;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#games h2 i {
+  font-size: 8rem;
+  color: red;
+  margin-bottom: 30px;
+}
+
+#games button {
+  padding: 10px 30px;
+  background-color: lightgreen;
+  border-radius: 50px;
+  box-shadow: 3px 5px 2px green;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+#games button:hover {
+  transform: translateY(3px);
+  transition: ease-in-out;
+  box-shadow: none;
+  background-color: #1ebe5d;
+}
+
+#games p {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
 
   .box {
     padding: 3rem 0;
