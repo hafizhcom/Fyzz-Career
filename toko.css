@@ -1128,10 +1128,11 @@ footer {
   }
 
   #hero h3 {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     font-family: 'Playfair Display', serif;
     font-style: italic;
+    font-weight: bold;
   }
 
   .username {
