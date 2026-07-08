@@ -138,8 +138,9 @@ btnProductFour.addEventListener("click", () => {
 const buttonPlay = document.getElementById("buttonPlay");
 
 buttonPlay.addEventListener('click', () => {
+  buttonPlay.textContent = "||"
   Swal.fire({
-    title: "OOPS, dikit lagi gamenya rilis",
+    title: "Siap untuk bermain dengan logika kamu ?",
     width: 600,
     padding: "1em",
     color: "#3422f3",
@@ -183,3 +184,19 @@ method.addEventListener("click", () => {
 });
 })
 
+// fitur username
+const userElement = document.getElementById('user');
+let username = localStorage.getItem('username');
+
+if (!username) {
+  username = prompt('Masukkan nama kamu:');
+  localStorage.setItem('username', username);
+}
+
+userElement.textContent = "Hai " + username + " 👋, Selamat datang!";
+
+function clearUsername() {
+  username = prompt('Ganti nama kamu : ');
+  localStorage.setItem('username', username);
+  userElement.textContent = "Hai " + username + " 👋, Selamat datang!";
+}
