@@ -186,6 +186,9 @@ method.addEventListener("click", () => {
 
 // fitur username
 const userElement = document.getElementById('user');
+const userProduct = document.getElementById('userProduct');
+const userTestimoni = document.getElementById('userTestimoni');
+const userGame = document.getElementById('userGame');
 let username = localStorage.getItem('username');
 
 if (!username) {
@@ -193,10 +196,24 @@ if (!username) {
   localStorage.setItem('username', username);
 }
 
-userElement.textContent = "Hai " + username + " 👋, Selamat datang!";
+userElement.textContent = "Hai " + username + " 👋,ingin pesan apa hari ini ?";
+userProduct.textContent = username + ", ini produk yang mungkin kamu suka ❤️";
+userProduct.style.fontSize = "0.980em";
+userProduct.style.fontFamily = "Arial, sans-serif";
+userProduct.style.wordSpacing = "0.05em";
+
+//user testimoni
+userTestimoni.textContent = username + ", ini kata pelanggan kami ⭐";
+userTestimoni.style.fontSize = "1.1em";
+userTestimoni.style.fontFamily = "Arial, sans-serif";
+userTestimoni.style.wordSpacing = "0.05em";
+
+//user game
+userGame.textContent = `Halo ${username}, waktunya main di FyzzGames! 🎮`;
+
 
 function clearUsername() {
   username = prompt('Ganti nama kamu : ');
   localStorage.setItem('username', username);
-  userElement.textContent = "Hai " + username + " 👋, Selamat datang!";
+  userElement.textContent = "Hai " + username + " 👋, Selamat datang! ingin pesan apa hari ini ?";
 }
