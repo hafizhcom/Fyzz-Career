@@ -252,7 +252,7 @@ header img {
 }
 
 #hero h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: sans-serif;
   word-spacing: 0.1rem;
   color:cyan;
   font-size: 0.96rem;
@@ -1131,7 +1131,7 @@ footer {
   #hero h3 {
     font-size: 14px;
     margin-top: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: sans-serif;
     word-spacing: 0.1rem;
     color: yellow;
     font-weight: 500;
