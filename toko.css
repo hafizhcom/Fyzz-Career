@@ -252,9 +252,8 @@ header img {
 }
 
 #hero h3 {
-  font-family: sans-serif;
   word-spacing: 0.1rem;
-  color:cyan;
+  color: cyan;
   font-size: 0.96rem;
   font-weight: 500;
 }
@@ -264,11 +263,11 @@ header img {
   top: 8px;
   left: 76%;
   max-width: 450px;
-  border-bottom: 2px solid rgba(34, 211, 97, 0.3);
+  border-bottom: 2px solid cyan;
 
   padding: 15px;
-  background-color: rgba(9, 5, 61, 0.5);
-  border-radius: 20px;
+  background-color: none;
+  border-radius: 5px;
 }
 
 #hero {
@@ -468,9 +467,9 @@ header img {
 
 #games button {
   padding: 23px 31px;
-  background-color: lightgreen;
-  border-radius: 50px;
-  box-shadow: 3px 5px 2px green;
+  background-color: cyan;
+  border-radius: 5px;
+  box-shadow: 3px 5px 2px rgb(5, 60, 73);
   border: none;
   font-size: 1.8rem;
   margin-left: 20px;
@@ -480,7 +479,7 @@ header img {
   transform: translateY(3px);
   transition: ease-in-out;
   box-shadow: none;
-  background-color: #1ebe5d;
+  background-color: lightblue;
 }
 
 #games p {
@@ -1131,20 +1130,22 @@ footer {
   #hero h3 {
     font-size: 14px;
     margin-top: 20px;
-    font-family: sans-serif;
     word-spacing: 0.1rem;
-    color: yellow;
+    color: cyan;
     font-weight: 500;
   }
 
   .username {
-    position: relative;
-    top: 20px;
-    left: 15px;
-    padding: 6px;
-    max-width: 500px;
-    border-radius: 10px;
-  }
+  position: relative;
+  left: 0;
+  top: 20px;
+  margin: 0 auto;
+  padding: 6px;
+  width: 90%;        /* atau max-width: 508px; width: 90%; */
+  max-width: 508px;
+  border-radius: 3px;
+  text-align: center; /* biar teks di dalamnya ikut ke tengah */
+}
 
   #faq h1 {
     font-size: 1rem;
@@ -1228,7 +1229,7 @@ footer {
   }
 
   #hero {
-    height: 90vh;
+    height: 100vh;
     width: auto;
     padding: 0 17px;
     background-position: center;
@@ -1354,6 +1355,7 @@ footer {
     padding: 25px;
     font-size: 1.5rem;
     margin-top: 20px;
+    background-color: cyan;
     margin-right: 15px;
   }
 
