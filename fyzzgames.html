@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon-fyzzgames.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fyzz Games - Game Tebak Kata</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo-fyzzgames.png" alt="fyzz-games-logo" />
+      <p>➖ ➖ ➖ ➖ ➖<i class="fa-solid fa-person-running run"></i></p>
+      <p>Buktikan Kecerdasanmu Sekarang !</p>
+    </div>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(252, 220, 179);
+      } 
+
+      .container {
+        text-align: center;
+        margin-top: 150px;
+      }
+      img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        border: 5px solid rgb(235, 147, 33);
+      }
+
+      p i {
+        display: inline-block;
+        font-size: 50px;
+        color: black;
+        margin-top: 20px;
+        animation:
+          running 0.5s infinite alternate,
+          move 3s infinite linear;
+      }
+
+      @keyframes running {
+        from {
+          transform: rotate(-10deg);
+        }
+
+        to {
+          transform: rotate(10deg);
+        }
+      }
+
+      @keyframes move {
+        from {
+          margin-left: -200px;
+        }
+
+        to {
+          margin-left: 200px;
+        }
+      }
+    </style>
+
+    <script>
+        setTimeout( () => {
+            window.location.href = "games.html";
+        }, 3000);
+    </script>
+  </body>
+</html>

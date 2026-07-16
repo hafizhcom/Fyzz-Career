@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="favicon-fyzzgames.png" type="image/png" />
+    <title>FyzzGames | Game tebak kata</title>
+  </head>
+  <body>
+    <header>
+      <div class="profil-games">
+        <div class="profil-list">
+          <img src="icon-game.png" alt="profil" />
+        </div>
+        <div class="profil-list">
+          <h3 id="nameProfil"></h3>
+        </div>
+      </div>
+      <div class="btnWinner">
+        <button onclick="checkWinner()">🎁</button>
+        <p>Ambil hadiah kamu</p>
+      </div>
+
+      <div class="audio">
+        <audio id="bgm" src="BGN.mp3" loop></audio>
+        <button id="btnMusic">🔈</button>
+      </div>
+    </header>
+    <div class="form-game" data-aos="fade-right">
+      <div class="game-1" id="gameOne">
+        <span class="pemula">Lv : pemula</span>
+        <p>❓Aku punya banyak gigi, tapi tidak bisa menggigit. Aku apa ?</p>
+        <input type="text" id="soalOne" placeholder="➖➖➖➖➖" />
+        <button id="btnOne">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Biasanya ada di kamar mandi."
+        >
+          💡Clue
+        </button>
+        <p id="point"></p>
+      </div>
+
+      <div class="game-2" id="gameTwo">
+        <span class="pemula">Lv : pemula</span>
+        <p>❓ Aku selalu naik, tapi tidak pernah turun. Apa aku?</p>
+        <input type="text" id="soalTwo" placeholder="➖➖➖➖" disabled />
+        <button id="btnTwo">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Berhubungan dengan umur."
+        >
+          💡Clue
+        </button>
+        <p id="pointTwo"></p>
+      </div>
+
+      <div class="game-3" id="gameThree">
+        <span class="pemula">Lv : pemula</span>
+        <p>❓Semakin diisi, semakin ringan. Apa itu?</p>
+        <input type="text" id="soalThree" placeholder="➖➖➖➖➖" disabled />
+        <button id="btnThree">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Berkaitan dengan benda yang bisa terbang."
+        >
+          💡Clue
+        </button>
+        <p id="pointThree"></p>
+      </div>
+
+      <div class="game-4" id="gameFour">
+        <span class="menengah">Lv : menengah</span>
+        <p>❓Orang membuatku, menyimpanku, lalu melupakanku. Apa aku?</p>
+        <input
+          type="text"
+          id="soalFour"
+          placeholder="➖➖➖➖➖➖➖➖"
+          disabled
+        />
+        <button id="btnFour">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Biasanya dipakai untuk keamanan."
+        >
+          💡Clue
+        </button>
+        <p id="pointFour"></p>
+      </div>
+
+      <div class="game-5" id="gameFive">
+        <span class="menengah">Lv : menengah</span>
+        <p>
+          ❓Semakin banyak kamu mengambil dariku, semakin besar aku. Apa aku?
+        </p>
+        <input type="text" id="soalFive" placeholder="➖➖➖➖➖➖" disabled />
+        <button id="btnFive">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Bukan makhluk hidup."
+        >
+          💡Clue
+        </button>
+        <p id="pointFive"></p>
+      </div>
+    </div>
+
+    <div class="form-game-2" data-aos="fade-right">
+      <div class="game-1" id="gameSix">
+        <span class="menengah">Lv : menengah</span>
+        <p>
+          ❓Aku selalu ada di depanmu, tapi tidak akan pernah bisa kamu lihat ?
+        </p>
+        <input
+          type="text"
+          id="soalSix"
+          placeholder="➖➖➖➖ ➖➖➖➖➖"
+          disabled
+        />
+        <button id="btnSix">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Berhubungan dengan waktu."
+        >
+          💡Clue
+        </button>
+        <p id="pointSix"></p>
+      </div>
+
+      <div class="game-2" id="gameSeven">
+        <span class="master">Lv : master</span>
+        <p>❓Aku bisa terbang tanpa sayap dan menangis tanpa mata. Aku apa?</p>
+        <input type="text" id="soalSeven" placeholder="➖➖➖➖" disabled />
+        <button id="btnSeven">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Clue dihapus. Sekarang panik sendiri."
+        >
+          💡Clue
+        </button>
+        <p id="pointSeven"></p>
+      </div>
+
+      <div class="game-3" id="gameEight">
+        <span class="master">Lv : master</span>
+        <p>
+          ❓Aku bisa berbicara tanpa mulut dan mendengar tanpa telinga. Aku apa?
+        </p>
+        <input type="text" id="soalEight" placeholder="➖➖➖➖" disabled />
+        <button id="btnEight">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Clue dihapus. Sekarang panik sendiri."
+        >
+          💡Clue
+        </button>
+        <p id="pointEight"></p>
+      </div>
+
+      <div class="game-4" id="gameNine">
+        <span class="master">Lv : master</span>
+        <p>❓Aku punya banyak huruf, tapi bukan buku. Aku apa?</p>
+        <input
+          type="text"
+          id="soalNine"
+          placeholder="➖➖➖➖➖➖ ➖➖➖"
+          disabled
+        />
+        <button id="btnNine">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Clue dihapus. Sekarang panik sendiri."
+        >
+          💡Clue
+        </button>
+        <p id="pointNine"></p>
+      </div>
+
+      <div class="game-5" id="gameTeen">
+        <span class="master">Lv : master</span>
+        <p>❓Aku memiliki leher tetapi tidak punya kepala. Aku apa?</p>
+        <input type="text" id="soalTeen" placeholder="➖➖➖➖➖" disabled />
+        <button id="btnTeen">jawab</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-container="body"
+          data-bs-toggle="popover"
+          data-bs-placement="top"
+          data-bs-content="Clue dihapus. Sekarang panik sendiri."
+        >
+          💡Clue
+        </button>
+        <p id="pointTeen"></p>
+      </div>
+    </div>
+
+    <div class="score" id="score">
+      <h3 id="cekSkor">Papan Skor</h3>
+    </div>
+
+    <style>
+      .dark-mode {
+        background-image: url("bg-games-neon.jpg");
+      }
+
+      .dark-mode .game-1 {
+        background: linear-gradient(to top, #f30909f6, #4008da);
+      }
+
+      .dark-mode .game-2 {
+        background: linear-gradient(to top, #f30909f6, #4008da);
+      }
+
+      .dark-mode .game-3 {
+        background: linear-gradient(to top, #f30909f6, #4008da);
+      }
+
+      .dark-mode .game-5 {
+        background: linear-gradient(to top, #f30909f6, #4008da);
+      }
+
+      .dark-mode .game-4 {
+        background: linear-gradient(to top, #f30909f6, #4008da);
+      }
+
+      .dark-mode p {
+        color: cyan;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        background-image: url("bg-wood.jpeg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      }
+
+      #timer {
+        text-align: center;
+        font-size: 1.2rem;
+        color: cyan;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 5px 10px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+        color: brown;
+      }
+
+      .form-game,
+      .form-game-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 25px 50px;
+        margin-top: 40px;
+      }
+
+      .game-1,
+      .game-2,
+      .game-3,
+      .game-4,
+      .game-5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 2rem 0;
+        border: 3px solid brown;
+        border-radius: 10px;
+        width: 300px; /* agar semua game memiliki lebar yang sama */
+        background-color: rgb(236, 187, 123);
+      }
+
+      #btnOne,
+      #btnTwo,
+      #btnThree,
+      #btnFour,
+      #btnFive,
+      #btnSix,
+      #btnSeven,
+      #btnEight,
+      #btnNine,
+      #btnTeen {
+        padding: 5px 2px;
+        margin: 5px 10px;
+        border: none;
+        background-color: lightgreen;
+        border-radius: 50px;
+        box-shadow: 0 2px 4px green;
+      }
+
+      #btnOne:hover,
+      #btnTwo:hover,
+      #btnThree:hover,
+      #btnFour:hover,
+      #btnFive:hover,
+      #btnSix:hover,
+      #btnSeven:hover,
+      #btnEight:hover,
+      #btnNine:hover,
+      #btnTeen:hover {
+        transform: translateY(2px);
+        box-shadow: none;
+        background-color: #b8e9b8;
+      }
+
+      input {
+        padding: 5px 2px;
+        margin: 5px 10px;
+        border-radius: 50px;
+        border: 2px solid brown;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      input:hover,
+      input:focus {
+        /* memberikan efek saat input dihover atau difokuskan ketika diklik*/
+        border: 2px solid lightgreen;
+        box-shadow: 0 0 5px lightgreen;
+        outline: none;
+      }
+
+      span.pemula {
+        font-size: 13px;
+        font-family: "Courier New", Courier, monospace;
+        background-color: silver;
+        padding: 2px 5px;
+        margin: 0px 90px;
+        border-radius: 5px;
+      }
+
+      span.menengah {
+        font-size: 13px;
+        font-family: "Courier New", Courier, monospace;
+        background-color: rgb(233, 216, 124);
+        padding: 2px 5px;
+        margin: 0px 90px;
+        border-radius: 5px;
+      }
+
+      span.master {
+        font-size: 13px;
+        font-family: "Courier New", Courier, monospace;
+        background-color: rgb(255, 99, 71);
+        padding: 2px 5px;
+        margin: 0px 90px;
+        border-radius: 5px;
+      }
+
+      .score {
+        padding: 7px 10px;
+        width: fit-content; /* ukuran mengikuti isi */
+        margin: 10px auto;
+        border: 2px solid gold;
+        border-radius: 10px;
+        background-color: #fff8dc;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        font-size: 15px;
+        font-family: Arial, sans-serif;
+      }
+
+      .btn-primary {
+        margin: 5px 10px;
+        border-radius: 50px;
+      }
+
+      .gameOne,
+      .gameTwo,
+      .gameThree,
+      .gameFour,
+      .gameFive,
+      .gameSix,
+      .gameSeven,
+      .gameEight,
+      .gameNine,
+      .gameTeen {
+        /* untuk memberikan efek pada game pertama saat jawaban benar */
+        border: 2px solid lightgreen;
+        box-shadow: 0 0 20px lightgreen;
+      }
+
+      .btnWinner {
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+
+      .btnWinner button {
+        padding: 5px 6px;
+        font-size: 25px;
+        background-color: gold;
+        border-radius: 50px;
+        box-shadow: 0 0 10px gold;
+        border: none;
+      }
+
+      .btnWinner p {
+        font-size: 12px;
+        color: white;
+        font-family: Arial, sans-serif;
+        word-spacing: 3px;
+      }
+
+      .profil-games {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: 50px;
+      }
+
+      .profil-list h3 {
+        font-size: 18px;
+        color: cyan;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-left: 5px;
+      }
+
+      .profil-list img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      #btnMusic {
+        padding: 8px;
+        font-size: 20px;
+        border-radius: 50px;
+        background-color: black;
+        margin-left: 47px;
+        position: fixed;
+        left: 90%;
+        top: 18px;
+      }
+
+      @media (max-width: 768px) {
+        .form-game,
+        .form-game-2 {
+          flex-direction: column;
+          gap: 20px;
+          margin-top: 50%;
+        }
+
+        body {
+          background-size: cover;
+          background-position: center;
+          height: 100vh;
+          background-image: url("bg-wood-mobile.jpeg");
+        }
+
+        .score {
+          position: fixed;
+          top: 110px;
+          left: 48%;
+          text-align: center;
+          padding: 5px 5px;
+          width: 179px;
+          transform: translateX(-50%); /* memutar elemen 90 derajat */
+          margin: 0;
+          z-index: 999;
+          transition: transform 0.3s ease;
+        }
+
+        .profil-games {
+          transform: translateX(-50%);
+          padding: 7px;
+          border-radius: 10px;
+          margin-left: 25px;
+        }
+
+        .profil-list h3 {
+          font-size: 18px;
+          font-family:
+            "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          font-weight: 800;
+        }
+
+        header {
+          display: flex;
+          justify-content: center;
+          gap: 0;
+          align-items: center;
+          padding: 5px 50px;
+          background-color: rgba(11, 1, 19, 0.979);
+          position: fixed;
+          top: 0;
+          z-index: 999;
+          border-bottom: 5px solid rgb(59, 36, 102);
+        }
+
+        header .btnWinner {
+          margin-right: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #btnMusic {
+        padding: 8px;
+        font-size: 20px;
+        border-radius: 50px;
+        background-color: rgb(32, 12, 68);
+        position: fixed;
+        left: 120px;
+        border: 2px solid rgb(118, 60, 211);
+        top: 20px;
+      }
+
+      .btnWinner {
+        margin-top: 0;
+      }
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]',
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
+      );
+
+      // === A. Logika Username & Profile (Pindahan dari game.js) ===
+      document.addEventListener("DOMContentLoaded", function () {
+        const nameProfil = document.getElementById("nameProfil");
+        let namePlayer = localStorage.getItem("namePlayer");
+
+        if (!namePlayer || namePlayer.trim() === "" || namePlayer === "null") {
+          namePlayer = prompt("Masukkan nama kamu untuk bermain game :");
+
+          if (!namePlayer || namePlayer.trim() === "") {
+            namePlayer = "Guest";
+          }
+          localStorage.setItem("namePlayer", namePlayer);
+        }
+
+        if (nameProfil) {
+          nameProfil.textContent = namePlayer;
+        }
+      });
+
+      //fitur BGM
+      document.addEventListener("DOMContentLoaded", () => {
+        const bgm = document.getElementById("bgm");
+        const btnMusic = document.getElementById("btnMusic");
+        let isPlaying = false;
+
+        btnMusic.addEventListener("click", () => {
+          if (!isPlaying) {
+            bgm.play();
+            btnMusic.textContent = "🔊";
+            isPlaying = true;
+          } else {
+            bgm.pause();
+            btnMusic.textContent = "🔈";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      window.addEventListener("load", function () {
+        AOS.init({
+          easing: "ease-in-out",
+          duration: 1200,
+          offset: 200,
+          once: true,
+        });
+      });
+    </script>
+    <script src="game.js"></script>
+  </body>
+</html>
