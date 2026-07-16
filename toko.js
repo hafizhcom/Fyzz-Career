@@ -160,7 +160,7 @@ buttonPlay.addEventListener('click', () => {
   }).then((result) => {
     if (result.isConfirmed) {
       setTimeout(() => {
-        window.location.href = "fyzzgames.html";
+        window.location.href = "";
       }, 1000); 
     }
   });
