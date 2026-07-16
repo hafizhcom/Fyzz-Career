@@ -160,7 +160,7 @@ buttonPlay.addEventListener('click', () => {
   }).then((result) => {
     if (result.isConfirmed) {
       setTimeout(() => {
-        window.location.href = "";
+        window.location.href = "fyzzgames.html";
       }, 1000); 
     }
   });
@@ -191,7 +191,7 @@ const userTestimoni = document.getElementById('userTestimoni');
 const userGame = document.getElementById('userGame');
 let username = localStorage.getItem('username');
 
-if (!username) {
+ while (!username || username.trim() === " " ){
   username = prompt('Masukkan nama kamu:');
   localStorage.setItem('username', username);
 }
@@ -217,3 +217,4 @@ function clearUsername() {
   localStorage.setItem('username', username);
   userElement.textContent = "Hai " + username + " 👋, Selamat datang! ingin pesan apa hari ini ?";
 }
+
