@@ -1,6 +1,6 @@
 {
     "name": "FyzzCareer",
-    "short_name": "App",
+    "short_name": "FyzzCareer",
     "description": "Layanan pembuatan web",
     "start_url": "/toko.html",
     "display": "standalone",
