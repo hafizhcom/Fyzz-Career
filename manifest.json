@@ -1,21 +1,21 @@
 {
-    "name": "FyzzCareer",
-    "short_name": "FyzzCareer",
-    "description": "Layanan pembuatan web",
-    "start_url": "/toko.html",
-    "display": "standalone",
-    "background_color": "#001F3F",
-    "theme_color": "#4F46E5",
-    "icons": [
+  "name": "FyzzCareer",
+  "short_name": "FyzzCareer",
+  "description": "Layanan pembuatan web",
+  "start_url": "https://fyzz-career.vercel.app/toko.html",
+  "display": "standalone",
+  "background_color": "#01f3f",
+  "theme_color": "#4F46E5",
+  "icons": [
     {
-        "src": "favicon-2.png",
-        "sizes": "192x192",
-        "type": "image/png"
+      "src": "https://fyzz-career.vercel.app/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-        "src": "favicon-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
+      "src": "https://fyzz-career.vercel.app/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-    ]
+  ]
 }
