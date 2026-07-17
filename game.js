@@ -198,8 +198,8 @@ btnTwo.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnTwo.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnTwo.textContent = "sudah terjawab";
+    btnTwo.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -276,8 +276,8 @@ btnThree.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnThree.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnThree.textContent = "sudah terjawab";
+    btnThree.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -354,8 +354,8 @@ btnFour.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnFour.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnFour.textContent = "sudah terjawab";
+    btnFour.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -432,8 +432,8 @@ btnFive.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnFive.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnFive.textContent = "sudah terjawab";
+    btnFive.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -511,8 +511,8 @@ btnSix.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnSix.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnSix.textContent = "sudah terjawab";
+    btnSix.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -590,8 +590,8 @@ btnSeven.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnSeven.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnSeven.textContent = "sudah terjawab";
+    btnSeven.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -668,8 +668,8 @@ btnEight.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnEight.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnEight.textContent = "sudah terjawab";
+    btnEight.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -747,8 +747,8 @@ btnNine.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnNine.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnNine.textContent = "sudah terjawab";
+    btnNine.style.backgroundColor = "lightgrey";
   }
 });
 
@@ -824,8 +824,8 @@ btnTeen.addEventListener("click", () => {
   }
   document.getElementById("score").innerText = "Score Kamu : " + score;
   if (btnTeen.disabled ){
-    btnOne.textContent = "sudah terjawab";
-    btnOne.style.backgroundColor = "lightgrey";
+    btnTeen.textContent = "sudah terjawab";
+    btnTeen.style.backgroundColor = "lightgrey";
   }
   
 });
