@@ -14,7 +14,7 @@
     <div class="container">
       <img src="logo-fyzzgames.png" alt="fyzz-games-logo" />
       <p>➖ ➖ ➖ ➖ ➖<i class="fa-solid fa-person-running run"></i></p>
-      <p>Buktikan Kecerdasanmu Sekarang !</p>
+      <p id="user"></p>
     </div>
 
     <style>
@@ -71,6 +71,17 @@
         setTimeout( () => {
             window.location.href = "games.html";
         }, 3000);
+
+        const user = document.getElementById('user');
+        let username = localStorage.getItem('username');
+
+        if(username) {
+          localStorage.setItem('username', username);
+          user.textContent = "Selamat bermain " + username;
+        }
+        user.style.fontSize = "18px";
+        user.style.fontFamily = "sans-serif";
+        user.style.fontWeight = "bold";
     </script>
   </body>
 </html>
