@@ -4,7 +4,7 @@
   "description": "Layanan pembuatan web",
   "start_url": "https://fyzz-career.vercel.app/toko.html",
   "display": "standalone",
-  "background_color": "#01f3f",
+  "background_color": "#001F3F",
   "theme_color": "#4F46E5",
   "icons": [
     {
