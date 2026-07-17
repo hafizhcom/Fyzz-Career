@@ -170,7 +170,7 @@ const method = document.getElementById("method");
 
 method.addEventListener("click", () => {
   Swal.fire({
-  title: "Custom animation with Animate.css",
+  title: "Game ini memerluka logika berpikir mu, capai skor sebanyak 84 dan klaim hadiah di ikon🎁 skor akan berkurang jika jawabanmu salah, jangan lupa untuk klaim hadiahnya",
   showClass: { popup: `
       animate__animated
       animate__backInDown
