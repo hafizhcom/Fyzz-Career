@@ -35,12 +35,14 @@ function promo() {
   let isMobile = window.innerWidth < 768;
 
   Swal.fire({
-    title: "🎓 Promo Pelajar!",
-    text: "CV + Surat Lamaran hanya Rp20.000",
-    imageUrl: "poster-promosi-new.png",
+    title: "Tantang dirimu, " + username + " !",
+    text: "Kumpulkan score sebanyak mungkin dan klaim hadiahnya!",
+    imageUrl: "poster_tebak_kata_fyzzgames.gif",
     imageWidth: isMobile ? "80%" : "70%",
     width: isMobile ? "90%" : "500px",
     padding: isMobile ? "10px" : "20px",
+    background: "#040b1ad3",
+    color: "#fff",
   });
 }
 
