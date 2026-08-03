@@ -9,6 +9,7 @@ const urlsToCache = [
   "https://fyzz-career.vercel.app/manifest.json",
   "https://fyzz-career.vercel.app/favicon-192.png",
   "https://fyzz-career.vercel.app/favicon-512.png",
+  "/no-connect.html",
 ];
 
 // 1. Install - simpen file penting ke cache
@@ -32,18 +33,50 @@ self.addEventListener("activate", (event) => {
             console.log("Deleting old cache:", cacheName);
             return caches.delete(cacheName);
           }
-        }),
+        })
       );
-    }),
+    })
   );
+
   self.clients.claim();
 });
 
-// 3. Fetch - ambil dari cache dulu, kalo ga ada baru ke internet
+// 3. Fetch
 self.addEventListener("fetch", (event) => {
+  // Hanya tangani request GET
+  if (event.request.method !== "GET") return;
+
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    }),
+    caches.match(event.request).then((cachedResponse) => {
+      // Jika ada di cache, gunakan cache
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      // Jika tidak ada, ambil dari internet
+      return fetch(event.request)
+        .then((networkResponse) => {
+          // Simpan hasil fetch ke cache
+          if (
+            networkResponse &&
+            networkResponse.status === 200 &&
+            networkResponse.type === "basic"
+          ) {
+            const responseClone = networkResponse.clone();
+
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
+
+          return networkResponse;
+        })
+        .catch(() => {
+          // Jika offline dan request halaman
+          if (event.request.mode === "navigate") {
+            return caches.match("/no-connect.html");
+          }
+        });
+    })
   );
 });
