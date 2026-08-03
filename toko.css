@@ -125,6 +125,7 @@ i .bi-box-arrow-in-up-right:hover {
 .dark-mode #hero {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("bg-4.jpeg");
+  border-bottom: 1px solid white;
 }
 
 .dark-mode .about h1,
@@ -276,6 +277,7 @@ header img {
   background-position: center;
   background-size: cover;
   height: 95vh;
+  border-radius: 0 0 30px 30px;
 }
 
 .hero-list {
@@ -1234,6 +1236,7 @@ footer {
     padding: 0 17px;
     background-position: center;
     background-size: cover;
+    border-radius: 0 0 30px 30px;
   }
 
   #hero a.button {
